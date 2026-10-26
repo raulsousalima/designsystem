@@ -1,0 +1,58 @@
+/* =====================================================
+   BASE — comum a todos os design systems do repositório.
+   Tailwind (utilitários mapeados para os tokens em tailwind.config.js)
+   e o reset mínimo. Nada aqui tem valor visual próprio: tudo vem dos
+   tokens de cada sistema (systems/<nome>/tokens.css).
+   ===================================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+/* Keyboard focus for anything not drawn by a ui-* component (they set their own). */
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: var(--border-2) solid var(--color-accent-text);
+  outline-offset: 2px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg-dark);
+  color: var(--color-text-primary-dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Theme visibility toggles */
+.show-in-light { display: none; }
+.show-in-dark { display: block; }
+:root[data-theme="light"] .show-in-light { display: block; }
+:root[data-theme="light"] .show-in-dark { display: none; }
+
+/* Glassmorphism Nav */
+.glass-nav {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Accent underline for headings */
+.heading-accent::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+}
+.heading-accent--center::after { margin-left: auto; margin-right: auto; }
+
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--alpha-20); border-radius: 3px; }

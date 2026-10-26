@@ -1,0 +1,22 @@
+{
+  "name": "designsystem",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Biblioteca de design systems: DS Kalion como base e sistemas derivados a partir de análises de projetos.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "ds:check": "node scripts/ds-check.mjs",
+    "ds:new": "node scripts/ds-new.mjs"
+  },
+  "devDependencies": {
+    "@tabler/icons-webfont": "^3.31.0",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.21"
+  }
+}

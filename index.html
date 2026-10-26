@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Systems | Raul Lima</title>
+  <meta name="description" content="Biblioteca de design systems de Raul Lima: o DS Kalion como base e sistemas derivados da análise de outros projetos." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>R</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" />
+</head>
+
+<body>
+  <header class="ui-navbar glass-nav home-nav">
+    <a href="/" class="home-brand">
+      <span class="ui-navbar__logo" aria-hidden="true">R</span>
+      <span>Design Systems</span>
+    </a>
+    <span class="home-nav__spacer"></span>
+    <div class="ds-lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="en" class="ds-lang__btn text-text-muted-dark">EN</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" data-lang-btn="pt" class="ds-lang__btn text-text-muted-dark">PT</button>
+    </div>
+    <a href="https://github.com/raulsousalima/designsystem" target="_blank" rel="noopener" class="ds-iconbtn" aria-label="GitHub">
+      <i class="ti ti-brand-github" aria-hidden="true"></i>
+    </a>
+    <button id="theme-toggle" type="button" class="ds-iconbtn" aria-label="Alternar tema claro/escuro">
+      <i class="ti ti-moon" id="theme-icon" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <main class="home">
+    <section class="home-hero">
+      <span class="ui-badge ui-badge--label" data-i18n="home.label">Biblioteca</span>
+      <h1 class="home-title heading-accent" data-i18n="home.title">Design Systems</h1>
+      <p class="home-lead" data-i18n="home.lead">
+        Uma biblioteca padrão, o <strong>DS Kalion</strong>, e sistemas derivados dela a partir da análise de outros
+        projetos. Cada design system tem tokens, componentes, documentação e simulador próprios.
+      </p>
+    </section>
+
+    <section aria-labelledby="home-systems">
+      <h2 id="home-systems" class="home-h2" data-i18n="home.systems">Sistemas</h2>
+      <ul class="home-grid" data-systems></ul>
+    </section>
+
+    <section class="home-how" aria-labelledby="home-how">
+      <h2 id="home-how" class="home-h2" data-i18n="home.how">Como nasce um novo sistema</h2>
+      <ol class="home-steps">
+        <li><i class="ti ti-search" aria-hidden="true"></i><strong data-i18n="home.step1.t">Analisar</strong><span data-i18n="home.step1.d">Cores, tipografia, raios, espaçamento e componentes do projeto viram um <code>analysis.md</code>.</span></li>
+        <li><i class="ti ti-copy" aria-hidden="true"></i><strong data-i18n="home.step2.t">Derivar</strong><span data-i18n="home.step2.d"><code>npm run ds:new</code> copia a base para <code>systems/&lt;nome&gt;</code>.</span></li>
+        <li><i class="ti ti-palette" aria-hidden="true"></i><strong data-i18n="home.step3.t">Adaptar</strong><span data-i18n="home.step3.d">Tokens, componentes novos, textos e o simulador do novo sistema.</span></li>
+        <li><i class="ti ti-checklist" aria-hidden="true"></i><strong data-i18n="home.step4.t">Validar</strong><span data-i18n="home.step4.d"><code>npm run ds:check</code> e build limpos, temas claro e escuro.</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+
+</html>

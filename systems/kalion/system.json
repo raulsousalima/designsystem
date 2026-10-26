@@ -1,0 +1,23 @@
+{
+  "name": "DS Kalion",
+  "slug": "kalion",
+  "version": "0.1.0",
+  "status": "estável",
+  "base": null,
+  "origin": "Portfólio Raul Lima (github.com/raulsousalima/about)",
+  "description": {
+    "pt": "A biblioteca padrão. Nasceu do portfólio: padrões mapeados, normalizados em tokens e componentes ui-*. Base para os demais sistemas.",
+    "en": "The default library. Born from the portfolio: patterns mapped, normalized into tokens and ui-* components. Base for every other system."
+  },
+  "simulator": "Kalion Bank",
+  "preview": {
+    "bg": "#111111",
+    "surface": "#1A1A1A",
+    "text": "#F4F4F4",
+    "accent": "#C8F04E",
+    "onAccent": "#111111",
+    "fontDisplay": "'Playfair Display', serif",
+    "fontText": "'Inter', sans-serif",
+    "radius": "1rem"
+  }
+}
