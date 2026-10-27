@@ -1,0 +1,23 @@
+{
+  "name": "Day System",
+  "slug": "day-system",
+  "version": "0.1.0",
+  "status": "rascunho",
+  "base": "kalion",
+  "origin": "Daycoval: Internet Banking (prototipo-navegavel) e Portal Fiduciário (portal-intern)",
+  "description": {
+    "pt": "Design system dos produtos digitais Daycoval. Tokens e componentes extraídos do Internet Banking e do Portal Fiduciário, sobre a base do DS Kalion.",
+    "en": "Design system for Daycoval digital products. Tokens and components extracted from Internet Banking and the Fiduciary Portal, on top of DS Kalion."
+  },
+  "simulator": "Kalion Bank (Internet Banking Daycoval na próxima etapa)",
+  "preview": {
+    "bg": "#F1F4F8",
+    "surface": "#FFFFFF",
+    "text": "#0E2253",
+    "accent": "#0A1E5A",
+    "onAccent": "#FFFFFF",
+    "fontDisplay": "'Mulish', sans-serif",
+    "fontText": "'Mulish', sans-serif",
+    "radius": "9999px"
+  }
+}

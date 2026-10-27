@@ -1,4 +1,6 @@
-export function initTheme() {
+// defaultTheme: used until the visitor picks one. DS Kalion opens in dark;
+// systems whose references are light-only (Day System) pass 'light'.
+export function initTheme(defaultTheme: 'dark' | 'light' = 'dark') {
   const toggleBtn = document.getElementById('theme-toggle');
   const icon = document.getElementById('theme-icon');
   
@@ -6,7 +8,7 @@ export function initTheme() {
 
   // Retrieve theme safely
   const savedTheme = localStorage.getItem('app-theme');
-  const currentTheme = savedTheme ? savedTheme : 'dark';
+  const currentTheme = savedTheme ? savedTheme : defaultTheme;
 
   const applyTheme = (theme: string) => {
     if (theme === 'light') {
